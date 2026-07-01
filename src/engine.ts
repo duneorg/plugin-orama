@@ -8,7 +8,7 @@
  */
 
 import type { SearchEngine, SearchResult, PageIndex, InjectedSearchRecord } from "@dune/core/search";
-import { create, insert, insertMultiple, remove, search, count } from "@orama/orama";
+import { create, insertMultiple, search } from "@orama/orama";
 import type { Orama, AnySchema, Results } from "@orama/orama";
 
 /** Options for {@link createOramaEngine}. */
