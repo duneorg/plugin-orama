@@ -1,6 +1,6 @@
 {
   "name": "@dune/plugin-orama",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "license": "MIT",
   "exports": {
     ".": "./src/mod.ts",
