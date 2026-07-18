@@ -2,7 +2,11 @@ import { assertEquals, assertGreater } from "@std/assert";
 import { createOramaEngine } from "../src/engine.ts";
 import type { PageIndex } from "@dune/core/search";
 
-function makePage(route: string, title: string, tags: string[] = []): PageIndex {
+function makePage(
+  route: string,
+  title: string,
+  tags: string[] = [],
+): PageIndex {
   return {
     sourcePath: `${route.replace(/^\//, "")}.md`,
     route,
@@ -33,7 +37,7 @@ Deno.test("createOramaEngine — basic search", async () => {
   ];
 
   const engine = createOramaEngine({}, pages, {
-    loadText: async (p) => p.title + " body text for " + p.route,
+    loadText: (p) => Promise.resolve(p.title + " body text for " + p.route),
   });
 
   await engine.build();
@@ -48,7 +52,7 @@ Deno.test("createOramaEngine — typo tolerance", async () => {
   const pages = [makePage("/test", "Meilisearch backend")];
 
   const engine = createOramaEngine({ tolerance: 1 }, pages, {
-    loadText: async () => "full text search engine",
+    loadText: () => Promise.resolve("full text search engine"),
   });
 
   await engine.build();

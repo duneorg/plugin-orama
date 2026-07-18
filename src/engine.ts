@@ -7,9 +7,14 @@
  * @module
  */
 
-import type { SearchEngine, SearchResult, PageIndex, InjectedSearchRecord } from "@dune/core/search";
+import type {
+  InjectedSearchRecord,
+  PageIndex,
+  SearchEngine,
+  SearchResult,
+} from "@dune/core/search";
 import { create, insertMultiple, search } from "@orama/orama";
-import type { Orama, AnySchema, Results } from "@orama/orama";
+import type { AnySchema, Orama, Results } from "@orama/orama";
 
 /** Options for {@link createOramaEngine}. */
 export interface OramaEngineOptions {
@@ -150,7 +155,9 @@ export function createOramaEngine(
     async search(query: string, limit = 20): Promise<SearchResult[]> {
       if (!db || !query.trim()) return [];
 
-      const queryTerms = query.trim().toLowerCase().split(/\s+/).filter((t) => t.length >= 2);
+      const queryTerms = query.trim().toLowerCase().split(/\s+/).filter((t) =>
+        t.length >= 2
+      );
 
       // deno-lint-ignore no-explicit-any
       const results: Results<any> = await search(db, {
