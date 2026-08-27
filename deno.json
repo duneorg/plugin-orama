@@ -1,6 +1,6 @@
 {
   "name": "@dune/plugin-orama",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "minimumDependencyAge": {
     "age": "P1D",
@@ -13,9 +13,9 @@
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@^1",
-    "@dune/core": "jsr:@dune/core@0.33",
-    "@dune/core/search": "jsr:@dune/core@0.33/search",
-    "@dune/core/hooks": "jsr:@dune/core@0.33/hooks",
+    "@dune/core": "jsr:@dune/core@0.34",
+    "@dune/core/search": "jsr:@dune/core@0.34/search",
+    "@dune/core/hooks": "jsr:@dune/core@0.34/hooks",
     "@orama/orama": "npm:@orama/orama@^3"
   },
   "tasks": {
