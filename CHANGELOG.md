@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.6] — 2026-11-10
+
+### Fixed
+
+- **`@dune/core` pin bumped to `0.36`.** The previous `0.35` range doesn't cover
+  `@dune/core` 0.36 — a site running it would have loaded a second, stale copy
+  of core just for this plugin. No behavior change: the engine already reads the
+  live `injectedRecords` array, so it follows core 0.36's refresh of
+  plugin-injected records on every rebuild.
+
 ## [1.0.5] — 2026-10-27
 
 ### Fixed
