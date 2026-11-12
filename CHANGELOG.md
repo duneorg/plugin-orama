@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0]
+
+### Changed
+
+- **Depends on `@dune/plugin-api` (`^1.2`), not on `@dune/core`.** The search
+  types and `DunePlugin` now come from the contract package, so a core release
+  no longer forces a new version of this plugin (the cause of the 1.0.5 and
+  1.0.6 pin-only releases). Works with any Dune that implements plugin-api 1
+  (0.36 and later). A `src/` import of `@dune/core` now fails the tests.
+
 ## [1.0.6] — 2026-11-10
 
 ### Fixed

@@ -12,7 +12,7 @@ import type {
   PageIndex,
   SearchEngine,
   SearchResult,
-} from "@dune/core/search";
+} from "@dune/plugin-api";
 import { create, insertMultiple, search } from "@orama/orama";
 import type { AnySchema, Orama, Results } from "@orama/orama";
 
