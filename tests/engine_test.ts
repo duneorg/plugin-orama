@@ -1,6 +1,6 @@
 import { assertEquals, assertGreater } from "@std/assert";
 import { createOramaEngine } from "../src/engine.ts";
-import type { PageIndex } from "@dune/core/search";
+import type { PageIndex } from "@dune/plugin-api";
 
 function makePage(
   route: string,

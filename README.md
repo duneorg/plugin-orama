@@ -70,7 +70,7 @@ import { createOramaEngine } from "@dune/plugin-orama/engine";
 
 const engine = createOramaEngine(
   { tolerance: 1, excerptLength: 200 },
-  pages, // PageIndex[] from @dune/core
+  pages, // PageIndex[] from @dune/plugin-api
   { loadText }, // async (page) => string — body text loader
 );
 

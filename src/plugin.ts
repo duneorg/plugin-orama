@@ -19,8 +19,8 @@
  * @module
  */
 
-import type { SearchEngineCreateContext } from "@dune/core/search";
-import type { DunePlugin } from "@dune/core/hooks";
+import type { SearchEngineCreateContext } from "@dune/plugin-api";
+import type { DunePlugin } from "@dune/plugin-api";
 import { createOramaEngine } from "./engine.ts";
 import type { OramaPluginConfig } from "./types.ts";
 
